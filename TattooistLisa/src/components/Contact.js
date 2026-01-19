@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <Box component="section" id="contact" className="contact" sx={{ py: 4 }}>
             <Container>
-                <Typography fontSize={24}
+                <Typography fontSize={30}
                     sx={{
                         fontWeight: 400,
                         letterSpacing: 0,

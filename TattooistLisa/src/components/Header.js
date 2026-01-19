@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Css/Header.css';
 import lisaImage from '../lisaImages/lisa.jpg';
 import { Box, Typography, Button, Stack } from '@mui/material';
@@ -54,6 +55,8 @@ const Header = () => {
                     justifyContent="center"
                 >
                     <Button
+                        component={Link}
+                        to="/HowToBook"
                         variant="contained"
                         sx={{
                             backgroundColor: 'white',
@@ -62,12 +65,15 @@ const Header = () => {
                             px: { xs: 1.5, sm: 2, md: 3 },
                             py: { xs: 0.5, sm: 1 },
                             minWidth: 'auto',
+                            textDecoration: 'none',
                             '&:hover': { backgroundColor: '#f0f0f0' }
                         }}
                     >
                         How to Book
                     </Button>
                     <Button
+                        component={Link}
+                        to="/Aftercare"
                         variant="outlined"
                         sx={{
                             borderColor: 'white',
@@ -76,6 +82,7 @@ const Header = () => {
                             px: { xs: 1.5, sm: 2, md: 3 },
                             py: { xs: 0.5, sm: 1 },
                             minWidth: 'auto',
+                            textDecoration: 'none',
                             '&:hover': { borderColor: '#f0f0f0', backgroundColor: 'rgba(255,255,255,0.1)' }
                         }}
                     >

@@ -43,7 +43,8 @@ const Header = () => {
                     component="h1"
                     sx={{
                         mb: { xs: 1, sm: 2, md: 4 },
-                        fontSize: { xs: '1.2rem', sm: '2rem', md: '3rem', lg: '3.75rem' },
+                        fontSize: { xs: '1.5rem', sm: '2.5rem', md: '4rem', lg: '5rem' },
+                        fontFamily: '"Annie Use Your Telescope", cursive',
                     }}
                 >
                     LAKEWOOD, WA
@@ -66,7 +67,8 @@ const Header = () => {
                             minWidth: 'auto',
                             textDecoration: 'none',
                             borderRadius: '50px',
-                            '&:hover': { backgroundColor: '#f0f0f0' }
+                            '&:hover': { backgroundColor: '#f0f0f0' },
+                            fontFamily: 'Alumni Sans',
                         }}
                     >
                         How to Book
@@ -84,7 +86,8 @@ const Header = () => {
                             minWidth: 'auto',
                             textDecoration: 'none',
                             borderRadius: '50px',
-                            '&:hover': { backgroundColor: '#f0f0f0' }
+                            '&:hover': { backgroundColor: '#f0f0f0' },
+                            fontFamily: 'Alumni Sans',
                         }}
                     >
                         Aftercare

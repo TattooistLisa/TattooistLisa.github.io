@@ -1,8 +1,8 @@
 import React from 'react';
 import './Css/Contact.css';
 import { Box, Container, Typography, Link, Stack } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import EmailIcon from '@mui/icons-material/Email';
+import { ReactComponent as InstagramIcon } from '../lisaImages/Instagram.svg';
+import { ReactComponent as MailIcon } from '../lisaImages/Mail.svg';
 
 const Contact = () => {
     return (
@@ -34,8 +34,8 @@ const Contact = () => {
                             fontFamily: 'Alumni Sans',
                         }}
                     >
-                        <InstagramIcon />
-                        <Typography fontSize={18} sx={{color:'black','&:hover': { color: '#BB6868' }}}>tattooist__lisaa</Typography>
+                        <InstagramIcon style={{ width: 24, height: 24, display: 'block' }} />
+                        <Typography fontSize={18} sx={{ color: 'black', lineHeight: 1, '&:hover': { color: '#BB6868' } }}>tattooist__lisaa</Typography>
                     </Link>
 
                     <Link
@@ -50,8 +50,8 @@ const Contact = () => {
                             fontFamily: 'Alumni Sans',
                         }}
                     >
-                        <EmailIcon  />
-                        <Typography fontSize={18} sx={{color:'black','&:hover': { color: '#BB6868' }}}>tattooistlisaa@gmail.com</Typography>
+                        <MailIcon style={{ width: 24, height: 24, display: 'block' }} />
+                        <Typography fontSize={18} sx={{ color: 'black', lineHeight: 1, '&:hover': { color: '#BB6868' } }}>tattooistlisaa@gmail.com</Typography>
                     </Link>
                 </Stack>
             </Container>

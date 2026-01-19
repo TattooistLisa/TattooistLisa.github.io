@@ -60,12 +60,13 @@ const Header = () => {
                         variant="contained"
                         sx={{
                             backgroundColor: 'white',
-                            color: '#1a2a4f',
+                            color: '#8A2A35',
                             fontSize: { xs: '0.65rem', sm: '0.85rem', md: '1rem' },
                             px: { xs: 1.5, sm: 2, md: 3 },
                             py: { xs: 0.5, sm: 1 },
                             minWidth: 'auto',
                             textDecoration: 'none',
+                            borderRadius: '50px',
                             '&:hover': { backgroundColor: '#f0f0f0' }
                         }}
                     >
@@ -74,16 +75,17 @@ const Header = () => {
                     <Button
                         component={Link}
                         to="/Aftercare"
-                        variant="outlined"
+                        variant="contained"
                         sx={{
-                            borderColor: 'white',
-                            color: 'white',
+                            backgroundColor: 'white',
+                            color: '#8A2A35',
                             fontSize: { xs: '0.65rem', sm: '0.85rem', md: '1rem' },
                             px: { xs: 1.5, sm: 2, md: 3 },
                             py: { xs: 0.5, sm: 1 },
                             minWidth: 'auto',
                             textDecoration: 'none',
-                            '&:hover': { borderColor: '#f0f0f0', backgroundColor: 'rgba(255,255,255,0.1)' }
+                            borderRadius: '50px',
+                            '&:hover': { backgroundColor: '#f0f0f0' }
                         }}
                     >
                         Aftercare

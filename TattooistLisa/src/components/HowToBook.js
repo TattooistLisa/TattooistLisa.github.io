@@ -3,6 +3,7 @@ import { Box, Container, Typography } from '@mui/material';
 import BWsingle2 from '../lisaImages/BWsingle2.jpg';
 
 const accentColor = '#8A2A35';
+const fontFamily = '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
 
 const Highlight = ({ children }) => (
     <Box component="span" sx={{ color: accentColor, fontWeight: 500 }}>
@@ -59,8 +60,8 @@ const HowToBook = () => {
                 </Box>
             </Box>
 
-            <Container maxWidth="sm" sx={{ py: 5 }}>
-                <Typography variant="h6" align="center" sx={{ mb: 3 }}>
+            <Container maxWidth="sm" sx={{ py: 5, fontFamily: fontFamily, fontWeight: 400, '& .MuiTypography-root': { fontFamily: 'inherit' } }}>
+                <Typography align="center" sx={{ mb: 3, fontWeight: 600, color: accentColor }}>
                     All booking is done through my Instagram!
                 </Typography>
 

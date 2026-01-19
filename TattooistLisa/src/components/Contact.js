@@ -14,7 +14,9 @@ const Contact = () => {
                     sx={{
                         mb: 3,
                         fontWeight: 400,
-                        letterSpacing: 2
+                        letterSpacing: 2,
+                        fontFamily: 'Alumni Sans',
+                        color: '#31312C'
                     }}
                 >
                     CONTACT
@@ -31,7 +33,8 @@ const Contact = () => {
                             alignItems: 'center',
                             gap: 1.5,
                             color: '#8A2A35',
-                            '&:hover': { color: '#6d2129' }
+                            '&:hover': { color: '#6d2129' },
+                            fontFamily: 'Alumni Sans'
                         }}
                     >
                         <InstagramIcon />
@@ -46,7 +49,8 @@ const Contact = () => {
                             alignItems: 'center',
                             gap: 1.5,
                             color: '#8A2A35',
-                            '&:hover': { color: '#6d2129' }
+                            '&:hover': { color: '#6d2129' },
+                            fontFamily: 'Alumni Sans'
                         }}
                     >
                         <EmailIcon />

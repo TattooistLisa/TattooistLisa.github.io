@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1716d5cb.css",
-    "main.js": "/static/js/main.71368c92.js",
+    "main.css": "/static/css/main.52afb653.css",
+    "main.js": "/static/js/main.4cb88bdf.js",
     "static/js/453.96ddf439.chunk.js": "/static/js/453.96ddf439.chunk.js",
+    "static/media/MultiPic.PNG": "/static/media/MultiPic.de04f0ea7fb254892898.PNG",
     "static/media/lisa.jpg": "/static/media/lisa.2c265dba14bb66aac7bc.jpg",
     "static/media/water.jpg": "/static/media/water.a3f7a7dcd48e49a5cb54.jpg",
     "static/media/payton.jpg": "/static/media/payton.205b9bdc01fa9b899ee8.jpg",
-    "static/media/CarterSquare.jpg": "/static/media/CarterSquare.63483803ec67597a99f6.jpg",
     "static/media/TattoistLisaLogo.png": "/static/media/TattoistLisaLogo.2e57bb2a3351c1a063d4.png",
-    "static/media/OIP.jpg": "/static/media/OIP.e42c62040d3a159d91a2.jpg",
     "static/media/linkedin.svg": "/static/media/linkedin.78fc22b0e4b55ebe02770a87ea1dfc05.svg",
     "index.html": "/index.html",
-    "main.1716d5cb.css.map": "/static/css/main.1716d5cb.css.map",
-    "main.71368c92.js.map": "/static/js/main.71368c92.js.map",
+    "main.52afb653.css.map": "/static/css/main.52afb653.css.map",
+    "main.4cb88bdf.js.map": "/static/js/main.4cb88bdf.js.map",
     "453.96ddf439.chunk.js.map": "/static/js/453.96ddf439.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1716d5cb.css",
-    "static/js/main.71368c92.js"
+    "static/css/main.52afb653.css",
+    "static/js/main.4cb88bdf.js"
   ]
 }

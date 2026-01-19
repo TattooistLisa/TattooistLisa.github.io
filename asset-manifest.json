@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.ee507e08.css",
-    "main.js": "/static/js/main.fea8753e.js",
+    "main.js": "/static/js/main.efeda690.js",
     "static/js/453.89152b56.chunk.js": "/static/js/453.89152b56.chunk.js",
     "static/media/MultiPic.PNG": "/static/media/MultiPic.de04f0ea7fb254892898.PNG",
     "static/media/lisa.jpg": "/static/media/lisa.2c265dba14bb66aac7bc.jpg",
     "static/media/water.jpg": "/static/media/water.a3f7a7dcd48e49a5cb54.jpg",
     "static/media/payton.jpg": "/static/media/payton.205b9bdc01fa9b899ee8.jpg",
+    "static/media/BWsingle2.jpg": "/static/media/BWsingle2.19a33e01a42ba2c28604.jpg",
     "static/media/TattoistLisaLogo.png": "/static/media/TattoistLisaLogo.2e57bb2a3351c1a063d4.png",
     "index.html": "/index.html",
     "main.ee507e08.css.map": "/static/css/main.ee507e08.css.map",
-    "main.fea8753e.js.map": "/static/js/main.fea8753e.js.map",
+    "main.efeda690.js.map": "/static/js/main.efeda690.js.map",
     "453.89152b56.chunk.js.map": "/static/js/453.89152b56.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ee507e08.css",
-    "static/js/main.fea8753e.js"
+    "static/js/main.efeda690.js"
   ]
 }

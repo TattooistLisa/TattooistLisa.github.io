@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Css/Team.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Grid, Box, Typography } from '@mui/material';
 import waterImage from '../images/water.jpg';
-import PaytonImage from '../images/payton.jpg'; 
-import { useEffect } from 'react';
-
+import PaytonImage from '../images/payton.jpg';
 
 const Team = () => {
     useEffect(() => {
@@ -12,27 +10,31 @@ const Team = () => {
     }, []);
     return (
         <>
-            <header
-                className="header text-white text-center py-5"
-                style={{ backgroundImage: `url(${waterImage})` }}
+            <Box
+                component="header"
+                sx={{
+                    backgroundImage: `url(${waterImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    color: 'white',
+                    textAlign: 'center',
+                    py: 5
+                }}
             >
-                <div className="container">
-                    <div className="header-content">
-                        <h1>Our Team</h1>
-
-
-                    </div>
-                </div>
-            </header>
+                <Container>
+                    <Box className="header-content">
+                        <Typography variant="h2" component="h1">Our Team</Typography>
+                    </Box>
+                </Container>
+            </Box>
             <section className="team" id="team">
-           
-           
 
-            <Container>
-                    <Row>
-                    <p></p>
-                <h2>Payton Rigert</h2>
-                    <Col md={6} className="bullet-points">
+            <Container maxWidth="lg">
+                    <Grid container spacing={3}>
+                    <Grid size={12}>
+                        <Typography variant="h4" component="h2" sx={{ mt: 2 }}>Payton Rigert</Typography>
+                    </Grid>
+                    <Grid size={{ xs: 12, md: 6 }} className="bullet-points">
                     
                                 <p>
                                 Payton Rigert has an impressive background in public health and communications, and she has been instrumental in supporting the COVID-19 response efforts of both the CDC Foundation and the Oregon Health Authority. She joined the CDC Foundation in August of 2020, where she made  significant contributions to the ongoing efforts to combat COVID-19 and improve public health outcomes. As the Regional Coordinator of Rome, GA, she served as a liaison between the state and the Northwest Public Health District for COVID-19 surge response.
@@ -47,18 +49,17 @@ const Team = () => {
                                 Payton holds a Master's in Public Health from the Rollins School of Public Health in Behavior Sciences and Health Education and a Bachelor of Science in Biology with a minor in Communication Arts from the University of the Cumberlands. 
                             </p>
                       
-                    
-                    </Col>
-                    <Col md={6} className="image-col">
-                        <img
-                                src={PaytonImage }
+
+                    </Grid>
+                    <Grid size={{ xs: 12, md: 6 }} className="image-col">
+                        <Box
+                            component="img"
+                            src={PaytonImage}
                             alt="Payton Rigert"
-                            className="img-fluid"
-                            />
-                            
-                    </Col>
-                    </Row>
-                    <Row>
+                            sx={{ width: '100%', maxWidth: '100%', height: 'auto' }}
+                        />
+                    </Grid>
+                    <Grid size={12}>
                         
                         
                             <h2>Payton's Experience</h2>
@@ -119,10 +120,10 @@ const Team = () => {
                                 </p>
                         </div>
 
-                        
 
-                    </Row>
 
+                    </Grid>
+                </Grid>
             </Container>
               
         </section>

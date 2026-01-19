@@ -1,26 +1,30 @@
 import React from 'react';
 import './Css/Header.css';
 import lisaImage from '../lisaImages/lisa.jpg';
-
+import { Box, Container, Typography } from '@mui/material';
 
 const Header = () => {
     return (
-        
-        <header
-            className="header text-white text-center py-5"
-            style={{ backgroundImage: `url(${lisaImage})` }}
+        <Box
+            component="header"
+            className="header"
+            sx={{
+                backgroundImage: `url(${lisaImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                color: 'white',
+                textAlign: 'center',
+                py: 5
+            }}
         >
-            <div className="container">
-                <div className="header-content">
-                    <h1>LAKEWOOD, WA</h1>
-                    <h2>How to Book</h2>
-                    <p>
-                        Aftercare
-                    </p>
-
-                </div>
-            </div>
-        </header>
+            <Container>
+                <Box className="header-content">
+                    <Typography variant="h2" component="h1">LAKEWOOD, WA</Typography>
+                    <Typography variant="h4" component="h2">How to Book</Typography>
+                    <Typography>Aftercare</Typography>
+                </Box>
+            </Container>
+        </Box>
     );
 };
 

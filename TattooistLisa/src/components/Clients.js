@@ -2,39 +2,56 @@ import React from 'react';
 import './Css/Clients.css';
 import publicHealthImage from '../images/OIP.jpg';
 import ImmunizeImage from '../images/iz-logo-shield.png';
+import { Box, Container, Grid, Typography, Divider } from '@mui/material';
+
+const clients = [
+    {
+        href: 'https://www.oregon.gov/oha/pages/index.aspx',
+        image: publicHealthImage,
+        alt: 'Oregon Health Authority'
+    },
+    {
+        href: 'https://www.immunize.org',
+        image: ImmunizeImage,
+        alt: 'Immunize.org'
+    }
+];
 
 const Clients = () => {
     return (
-
-            <section class="bg-light py-5 py-xl-6">
-                <div class="container mb-5 mb-md-6">
-                    <div class="row justify-content-md-center">
-                        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center">
-                            <h2 class="mb-4 display-5">Clients</h2>
-                            <p class="text-secondary mb-4 mb-md-5"></p>
-                            <hr class="w-50 mx-auto mb-0 text-secondary"/>
-                        </div>
-                    </div>
-                </div>
-            <div class="container">
-                <div class="row d-flex align-items-center">
-                    <div class="col-12 col-md-3 mx-auto text-center">
-                    <a href="https://www.oregon.gov/oha/pages/index.aspx" target="_blank" rel="noopener noreferrer">
-                        <img class="img-fluid rounded rounded-circle mb-4" loading="lazy" src={publicHealthImage} alt="" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row d-flex align-items-center">
-                    <div class="col-12 col-md-3 mx-auto text-center">
-                    <a href="https://www.immunize.org" target="_blank" rel="noopener noreferrer">
-                        <img class="img-fluid rounded rounded-circle mb-4" loading="lazy" src={ImmunizeImage} alt="" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-            </section>
+        <Box component="section" sx={{ backgroundColor: '#f8f9fa', py: { xs: 5, xl: 6 } }}>
+            <Container sx={{ mb: { xs: 5, md: 6 } }}>
+                <Grid container justifyContent="center">
+                    <Grid size={{ xs: 12, md: 10, lg: 8, xl: 7 }} sx={{ textAlign: 'center' }}>
+                        <Typography variant="h3" component="h2" sx={{ mb: 4 }}>
+                            Clients
+                        </Typography>
+                        <Divider sx={{ width: '50%', mx: 'auto', borderColor: 'text.secondary' }} />
+                    </Grid>
+                </Grid>
+            </Container>
+            {clients.map((client, index) => (
+                <Container key={index}>
+                    <Grid container sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Grid size={{ xs: 12, md: 3 }} sx={{ mx: 'auto', textAlign: 'center' }}>
+                            <a href={client.href} target="_blank" rel="noopener noreferrer">
+                                <Box
+                                    component="img"
+                                    src={client.image}
+                                    alt={client.alt}
+                                    loading="lazy"
+                                    sx={{
+                                        maxWidth: '100%',
+                                        borderRadius: '50%',
+                                        mb: 4
+                                    }}
+                                />
+                            </a>
+                        </Grid>
+                    </Grid>
+                </Container>
+            ))}
+        </Box>
     );
 };
 

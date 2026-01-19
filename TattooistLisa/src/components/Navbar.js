@@ -1,37 +1,114 @@
-import React from 'react';
-import './Css/Navbar.css';
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import Logo from '../images/TattoistLisaLogo.png';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import {
+    AppBar,
+    Toolbar,
+    Container,
+    Box,
+    IconButton,
+    Drawer,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemText,
+    Button,
+    useMediaQuery,
+    useTheme
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
+    const [mobileOpen, setMobileOpen] = useState(false);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
+    };
+
+    const navItems = [
+        { label: 'Home', to: '/', isLink: true },
+        { label: 'Team', to: '/team', isLink: true },
+        { label: 'Contact', to: '#contact', isLink: false },
+    ];
+
+    const drawer = (
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+            <List>
+                {navItems.map((item) => (
+                    <ListItem key={item.label} disablePadding>
+                        <ListItemButton
+                            component={item.isLink ? Link : 'a'}
+                            to={item.isLink ? item.to : undefined}
+                            href={!item.isLink ? item.to : undefined}
+                            sx={{ textAlign: 'center' }}
+                        >
+                            <ListItemText primary={item.label} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
+    );
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark">
-            <div className="container">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <a className="navbar-brand" href="#">
-                    <img className="navbar-logo" src={Logo} alt="Tattoist Lisa Logo" />
-                </a>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ms-auto">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="team">Team</Link>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#contact">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <>
+            <AppBar position="sticky" sx={{ backgroundColor: '#1a2a4f', boxShadow: 'none', zIndex: 1000 }}>
+                <Container maxWidth="lg">
+                    <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
+                        {isMobile && (
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                edge="start"
+                                onClick={handleDrawerToggle}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                        )}
+
+                        <Link to="/">
+                            <Box
+                                component="img"
+                                src={Logo}
+                                alt="Tattoist Lisa Logo"
+                                sx={{ height: 50 }}
+                            />
+                        </Link>
+
+                        {!isMobile && (
+                            <Box sx={{ display: 'flex', gap: 2 }}>
+                                {navItems.map((item) => (
+                                    <Button
+                                        key={item.label}
+                                        component={item.isLink ? Link : 'a'}
+                                        to={item.isLink ? item.to : undefined}
+                                        href={!item.isLink ? item.to : undefined}
+                                        sx={{ color: 'white' }}
+                                    >
+                                        {item.label}
+                                    </Button>
+                                ))}
+                            </Box>
+                        )}
+                    </Toolbar>
+                </Container>
+            </AppBar>
+
+            <Drawer
+                variant="temporary"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                ModalProps={{ keepMounted: true }}
+                sx={{
+                    display: { xs: 'block', md: 'none' },
+                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+                }}
+            >
+                {drawer}
+            </Drawer>
+        </>
     );
 };
 

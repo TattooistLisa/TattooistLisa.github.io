@@ -1,72 +1,82 @@
 import React, { useState } from "react";
+import { Box, Container, Grid, Typography, TextField, Button } from '@mui/material';
 
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/3a684de0-db0f-11ed-a90b-63724fe92d96"; // TODO - fill on the later step
+const FORM_ENDPOINT = "https://public.herotofu.com/v1/3a684de0-db0f-11ed-a90b-63724fe92d96";
 
 const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = () => {
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 100);
-  };
-
-  
+    const [submitted, setSubmitted] = useState(false);
+    const handleSubmit = () => {
+        setTimeout(() => {
+            setSubmitted(true);
+        }, 100);
+    };
 
     return (
-        <section id="contact" className="contact py-5">
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-    <form
-      action={FORM_ENDPOINT}
-      onSubmit={handleSubmit}
-      method="POST"
+        <Box component="section" id="contact" className="contact" sx={{ py: 5 }}>
+            <Container>
+                <Grid container justifyContent="center">
+                    <Grid size={{ xs: 12, md: 8 }}>
+                        <Box
+                            component="form"
+                            action={FORM_ENDPOINT}
+                            onSubmit={handleSubmit}
+                            method="POST"
                             target="_blank"
-                            className="text-center"
-        >
-            <h3>Contact</h3>
-      <div className="mb-3 pt-0">
-        <input
-          type="text"
-          placeholder="Your name"
-          name="name"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-          required
-        />
-      </div>
-      <div className="mb-3 pt-0">
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-          required
-        />
-      </div>
-      <div className="mb-3 pt-0">
-        <textarea
-          placeholder="Your message"
-          name="message"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+                            sx={{ textAlign: 'center' }}
+                        >
+                            <Typography variant="h5" component="h3" gutterBottom>
+                                Contact
+                            </Typography>
+                            <Box sx={{ mb: 3 }}>
+                                <TextField
+                                    fullWidth
+                                    type="text"
+                                    placeholder="Your name"
+                                    name="name"
                                     required
-                                    rows="5"
-                                    cols="50"
-        />
-      </div>
-      <div className="mb-3 pt-0">
-        <button
-          className="bg-blue-500 text-blue active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-          type="submit"
-        >
-          Send a message
-        </button>
-      </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-</section >
-  );
+                                    variant="outlined"
+                                    size="small"
+                                />
+                            </Box>
+                            <Box sx={{ mb: 3 }}>
+                                <TextField
+                                    fullWidth
+                                    type="email"
+                                    placeholder="Email"
+                                    name="email"
+                                    required
+                                    variant="outlined"
+                                    size="small"
+                                />
+                            </Box>
+                            <Box sx={{ mb: 3 }}>
+                                <TextField
+                                    fullWidth
+                                    placeholder="Your message"
+                                    name="message"
+                                    required
+                                    multiline
+                                    rows={5}
+                                    variant="outlined"
+                                    size="small"
+                                />
+                            </Box>
+                            <Box sx={{ mb: 3 }}>
+                                <Button
+                                    type="submit"
+                                    variant="contained"
+                                    color="primary"
+                                    sx={{ textTransform: 'uppercase', fontWeight: 'bold' }}
+                                >
+                                    Send a message
+                                </Button>
+                            </Box>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Container>
+        </Box>
+    );
 };
 
 export default ContactForm;

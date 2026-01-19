@@ -8,13 +8,10 @@ const Contact = () => {
     return (
         <Box component="section" id="contact" className="contact" sx={{ py: 5 }}>
             <Container>
-                <Typography
-                    variant="h5"
-                    component="h3"
+                <Typography fontSize={24}
                     sx={{
-                        mb: 3,
                         fontWeight: 400,
-                        letterSpacing: 2,
+                        letterSpacing: 0,
                         fontFamily: 'Alumni Sans',
                         color: '#31312C'
                     }}
@@ -28,33 +25,33 @@ const Contact = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         underline="none"
+                        fontSize={18}
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
                             gap: 1.5,
-                            color: '#8A2A35',
-                            '&:hover': { color: '#6d2129' },
-                            fontFamily: 'Alumni Sans'
+                            color: '#8A2A35' ,
+                            fontFamily: 'Alumni Sans',
                         }}
                     >
                         <InstagramIcon />
-                        <Typography>tattooist__lisaa</Typography>
+                        <Typography fontSize={18} sx={{color:'black','&:hover': { color: '#8A2A35' }}}>tattooist__lisaa</Typography>
                     </Link>
 
                     <Link
                         href="mailto:tattooistlisaa@gmail.com"
                         underline="none"
+                        fontSize={18}
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
                             gap: 1.5,
                             color: '#8A2A35',
-                            '&:hover': { color: '#6d2129' },
-                            fontFamily: 'Alumni Sans'
+                            fontFamily: 'Alumni Sans',
                         }}
                     >
-                        <EmailIcon />
-                        <Typography>tattooistlisaa@gmail.com</Typography>
+                        <EmailIcon  />
+                        <Typography fontSize={18} sx={{color:'black','&:hover': { color: '#8A2A35' }}}>tattooistlisaa@gmail.com</Typography>
                     </Link>
                 </Stack>
             </Container>

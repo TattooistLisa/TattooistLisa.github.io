@@ -1,20 +1,21 @@
 import React from 'react';
 import './Css/Header.css';
-import PaytonImage from '../images/background.jpg';
+import lisaImage from '../lisaImages/lisa.jpg';
 
 
 const Header = () => {
     return (
+        
         <header
             className="header text-white text-center py-5"
-            style={{ backgroundImage: `url(${PaytonImage})` }}
+            style={{ backgroundImage: `url(${lisaImage})` }}
         >
             <div className="container">
                 <div className="header-content">
-                    <h1>Nova Public Health Consulting</h1>
-                    <h2>Empowering Healthier Futures, Together</h2>
+                    <h1>LAKEWOOD, WA</h1>
+                    <h2>How to Book</h2>
                     <p>
-                        Owned and Operated by Payton Rigert
+                        Aftercare
                     </p>
 
                 </div>

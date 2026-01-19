@@ -101,7 +101,7 @@ const Aftercare = () => {
                     • While your tattoo is healing <Highlight>avoid</Highlight> swimming, bathing, excessive sweating, tight clothing and direct sunlight.
                 </Typography>
 
-                <Typography align="center" sx={{ mb: 3 }}>
+                <Typography align="center" >
                     • Once it's healed, <Highlight>keep moisturizing daily and use sunscreen</Highlight> to keep the vibrancy!
                 </Typography>
             </Container>

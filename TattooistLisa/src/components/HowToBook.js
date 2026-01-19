@@ -99,7 +99,7 @@ const HowToBook = () => {
                     • Please be on time, all clients are given a <Highlight>10 minute grace period</Highlight>. <Highlight>Deposit will be forfeited</Highlight> if there isn't enough time before the next appointment
                 </Typography>
 
-                <Typography align="center" sx={{ mb: 3 }}>
+                <Typography align="center" >
                     • <Highlight>First touch up is free</Highlight> for up to <Highlight>3 months</Highlight> of appointment for flash tattoos or <Highlight>1 year</Highlight> for bigger pieces. Exceeding 3 months/1 year will require payment
                 </Typography>
             </Container>

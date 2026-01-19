@@ -6,7 +6,7 @@ import { ReactComponent as MailIcon } from '../lisaImages/Mail.svg';
 
 const Contact = () => {
     return (
-        <Box component="section" id="contact" className="contact" sx={{ py: 5 }}>
+        <Box component="section" id="contact" className="contact" sx={{ py: 4 }}>
             <Container>
                 <Typography fontSize={24}
                     sx={{

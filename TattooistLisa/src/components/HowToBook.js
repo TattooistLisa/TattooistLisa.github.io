@@ -1,151 +1,131 @@
 import React, { useEffect } from "react";
-import './Css/Team.css';
-import { Container, Grid, Box, Typography } from '@mui/material';
-import waterImage from '../images/water.jpg';
+import { Box, Container, Typography, List, ListItem } from '@mui/material';
 import BWsingle2 from '../lisaImages/BWsingle2.jpg';
+
+const accentColor = '#8b7355';
+
+const Highlight = ({ children }) => (
+    <Box component="span" sx={{ color: accentColor, fontWeight: 500 }}>
+        {children}
+    </Box>
+);
 
 const HowToBook = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     return (
         <>
-      <Box
-            component="header"
-            sx={{
-                position: 'relative',
-                width: '100%',
-                overflow: 'hidden'
-            }}
-        >
-            {/* Image - always shows full, scales with screen */}
             <Box
-                component="img"
-                src={BWsingle2}
-                alt="Lisa Tattoo Artist"
+                component="header"
                 sx={{
+                    position: 'relative',
                     width: '100%',
-                    height: 'auto',
-                    display: 'block'
-                }}
-            />
-
-            {/* Content overlay - positioned on top of image */}
-            <Box
-                sx={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    color: 'white',
-                    textAlign: 'center',
-                    width: '90%'
+                    overflow: 'hidden'
                 }}
             >
-                <Typography
-                    variant="h2"
-                    component="h1"
+                <Box
+                    component="img"
+                    src={BWsingle2}
+                    alt="Lisa Tattoo Artist"
                     sx={{
-                        mb: { xs: 1, sm: 2, md: 4 },
-                        fontSize: { xs: '1.2rem', sm: '2rem', md: '3rem', lg: '3.75rem' },
-                        textShadow: '2px 2px 4px rgba(0,0,0,0.7)'
+                        width: '100%',
+                        height: 'auto',
+                        display: 'block'
+                    }}
+                />
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        color: 'white',
+                        textAlign: 'center',
+                        width: '90%'
                     }}
                 >
-                    HOW TO BOOK
-                </Typography>
+                    <Typography
+                        variant="h2"
+                        component="h1"
+                        sx={{
+                            fontSize: { xs: '1.2rem', sm: '2rem', md: '3rem', lg: '3.75rem' },
+                            textShadow: '2px 2px 4px rgba(0,0,0,0.7)'
+                        }}
+                    >
+                        HOW TO BOOK
+                    </Typography>
+                </Box>
             </Box>
-        </Box>
 
-            <Container maxWidth="lg">
-                    <Grid container spacing={3}>
-                    <Grid size={12}>
-                        <Typography variant="h4" component="h2" sx={{ mt: 2 }}>Payton Rigert</Typography>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 6 }} className="bullet-points">
-                    
-                                <p>
-                                Payton Rigert has an impressive background in public health and communications, and she has been instrumental in supporting the COVID-19 response efforts of both the CDC Foundation and the Oregon Health Authority. She joined the CDC Foundation in August of 2020, where she made  significant contributions to the ongoing efforts to combat COVID-19 and improve public health outcomes. As the Regional Coordinator of Rome, GA, she served as a liaison between the state and the Northwest Public Health District for COVID-19 surge response.
-                            </p>
-                            <p>
-                                Payton has also contracted with the Oregon Health Authority to support the Vaccine Operations Team-Equity as a Vaccine Resource Coordinator. In this role, she coordinated vaccine resources for over 100 community partners to promote health equity in the state of Oregon. Payton effectively planned and managed resources for over 1600 vaccine events, fostered connections across OHA to support initiatives promoting equitable access to COVID-19 community resources and vaccines, and utilized Smartsheets as an event tracking solution while maintaining relationships with community-based organizations.
-                            </p>
-                            <p>
-                                In addition to her work in Georgia and Oregon, Payton has extensive experience in online management and communications. During the pandemic, she worked for a telemedicine clinic, where she honed her skills in managing online communications. She has also worked as a qualitative researcher for Emory University. Payton's experiences include time in Tunisia, where she helped to manage an education program and teach English to youth in the area. She has also worked for Montana State University in their land-grant cooperative extension services.
-                            </p>
-                            <p>
-                                Payton holds a Master's in Public Health from the Rollins School of Public Health in Behavior Sciences and Health Education and a Bachelor of Science in Biology with a minor in Communication Arts from the University of the Cumberlands. 
-                            </p>
-                      
+            <Container maxWidth="md" sx={{ py: 5 }}>
+                <Typography variant="h6" sx={{ mb: 3 }}>
+                    All booking is done through my Instagram!
+                </Typography>
 
-                    </Grid>
-                   
-                    <Grid size={12}>
-                        
-                        
-                            <h2>Payton's Experience</h2>
-                            <div id="CommunityAssessment">
-                            <br></br>
-                        <h3>Community Assessment</h3>
-                        
-                        <p>
-                            Payton played a critical role in conducting a remote community assessment for the Chicago Public Schools (CPS) Office of Student Health and Wellness, where she served as the lead qualitative data collection specialist and analyst. The project's goal was to achieve health equity in Chicago by ensuring that LGBTQ+ youth in CPS have safe and supportive environments in their schools.
-                        </p>
-                        <p>
-                            One of Payton's significant contributions was teaching the other four team members how to analyze qualitative data using MAXQDA, a software program that enables researchers to analyze large volumes of qualitative data efficiently. With her guidance, the team was able to effectively analyze the data and draw meaningful conclusions.
-                        </p>
-                        <p>
-                            Working under time constraints was a significant challenge for the team, but they were able to overcome this obstacle by utilizing a Gantt chart, weekly check-in meetings, and strict internal deadlines. 
-                        </p>
+                <List sx={{ listStyleType: 'disc', pl: 2 }}>
+                    <ListItem sx={{ display: 'list-item', pl: 0 }}>
+                        <Typography>
+                            To book <Highlight>DM me</Highlight> with your design, full name, email, phone number and time slot (availability is in my story highlights)
+                        </Typography>
+                    </ListItem>
 
-                        <p>
-                            Conducting a community assessment solely through virtual platforms presented additional challenges, but Payton and her team recognized that flexibility, adaptability, and continuous communication were key to completing a remote project successfully. By collaborating effectively and leveraging technology, they were able to gather and analyze data, identify key insights, and develop actionable recommendations to support the health and well-being of LGBTQ+ youth in CPS.
-                        </p>
-                        </div>
+                    <ListItem sx={{ display: 'list-item', pl: 0 }}>
+                        <Typography>
+                            For customs send any inspo pics/reference, let me know the size, shading or just outline, placement, and design description
+                        </Typography>
+                    </ListItem>
 
-                        <div id="ProgramEvaluation">
-                            <br></br>
-                            <h3>Program Evaluation</h3>
+                    <ListItem sx={{ display: 'list-item', pl: 0 }}>
+                        <Typography>
+                            <Highlight>Deposit is required</Highlight> to book and will be subtracted from your total at your appointment
+                        </Typography>
+                        <List sx={{ listStyleType: 'circle', pl: 3, mt: 1 }}>
+                            <ListItem sx={{ display: 'list-item', pl: 0, py: 0.5 }}>
+                                <Typography>
+                                    <Highlight>Deposits are non refundable</Highlight>
+                                </Typography>
+                            </ListItem>
+                            <ListItem sx={{ display: 'list-item', pl: 0, py: 0.5 }}>
+                                <Typography>
+                                    <Highlight>Cancellation or no show will forfeit the deposit</Highlight>
+                                </Typography>
+                            </ListItem>
+                        </List>
+                    </ListItem>
 
-                            <p>
-                                Payton participated in a formative and process evaluation conducted by graduate students from the Rollins School of Public Health for the Center of Disease Control's Division of Scientific Education and Professional Development, Office of Policy, Partnerships, and Recruitment (DSEPD). The evaluation aimed to assess the strengths and challenges of current DSEPD partnerships, communication strategies used by DSEPD staff to establish effective relationships with partners, expectations and perceptions of partnerships, and partner perspectives on how these partnerships function. The evaluation was conducted through virtual key informant interviews with DSEPD staff members and resulted in four main recommendations for improving partnership outcomes, including standardizing communication methods with external partners, identifying common goals and priorities between partners, understanding external partners' expectations and perspectives, and conducting annual assessments of partnership relationships. Payton's experience in the evaluation contributed to improving DSEPD's partnerships and support for improving the public health workforce.
-                            </p>
-                            
-                        </div>
+                    <ListItem sx={{ display: 'list-item', pl: 0 }}>
+                        <Typography>
+                            Rescheduling must be done <Highlight>at least 2 days prior</Highlight> to the appointment date to avoid forfeiting deposit
+                        </Typography>
+                    </ListItem>
 
-                        <div id="QualitativeDataAnalysis">
-                            <br></br>
-                            <h3>Qualitative Data Analysis</h3>
+                    <ListItem sx={{ display: 'list-item', pl: 0 }}>
+                        <Typography>
+                            <Highlight>One reschedule is allowed</Highlight> within 2 days of appointment any more will require <Highlight>a second deposit</Highlight>
+                        </Typography>
+                    </ListItem>
 
-                            <p>
-                                Payton worked as a graduate research assistant on a systematic review focused on contraceptive methods among young women in the U.S. Throughout this project, they reviewed over 600 research articles using Endnote, demonstrating a high level of attention to detail and organization skills. As part of the review process, Payton was trained in remote qualitative interviewing and qualitative analysis, developing skills that are particularly valuable in today's virtual research environment. Through their work on this project, they gained experience in record management within a research team and learned how to effectively collaborate with team members in a remote setting. Payton's contributions to this systematic review showcase their ability to conduct rigorous research, work collaboratively with a team, and adapt to changing research environments.
-                            </p>
+                    <ListItem sx={{ display: 'list-item', pl: 0 }}>
+                        <Typography>
+                            <Highlight>Please reschedule</Highlight> if you are sick or your skin in placement area is damaged
+                        </Typography>
+                    </ListItem>
 
-                        </div>
+                    <ListItem sx={{ display: 'list-item', pl: 0 }}>
+                        <Typography>
+                            Please be on time, all clients are given a <Highlight>10 minute grace period</Highlight>. <Highlight>Deposit will be forfeited</Highlight> if there isn't enough time before the next appointment
+                        </Typography>
+                    </ListItem>
 
-                        <div id ="ManagementConsulting">
-                            <br></br>
-                            <h3>Management Consulting</h3>
-                          
-                            <p>
-                                Payton has gained extensive experience in management consulting, specifically in management and risk communication, over the past three years. They started by restructuring the management system in two health districts spanning 13 counties in Georgia, creating a multi-tiered management structure that allowed for more effective communication and delegation. Payton has also worked at the district, regional, and state level to coordinate the COVID-19 management response and assist others in achieving success in their roles. Throughout their work, they have recognized the importance of team dynamics in program implementation and have effectively worked on interprofessional teams in various roles. Payton is a dependable and flexible problem-solver, with a wealth of experience in program management, delegation, and working under pressure. Their expertise in management consulting has helped organizations improve their operations and better serve their stakeholders.
-                               </p>
-                        </div>
-
-                        <div id="HealthcareClinicVirtualization">
-                            <br></br>
-                            <h3>Healthcare Clinic Virtualization</h3>
-                           
-                            <p>
-                                Payton played an instrumental role in the virtualization of a healthcare clinic, utilizing their expertise in healthcare technology and project management. They worked closely with the clinic's staff to identify areas where virtualization could be implemented to improve patient care and streamline processes. Payton's contributions included developing a comprehensive plan for implementing telehealth services, training staff on virtual consultation platforms, and integrating electronic health records with the telehealth system. They also worked to ensure that patient information was protected and that the telehealth services were compliant with all relevant regulations. Payton's efforts resulted in the successful implementation of virtual healthcare services, providing patients with convenient access to care and improving the efficiency and effectiveness of the clinic's operations.
-                                </p>
-                        </div>
-
-
-
-                    </Grid>
-                </Grid>
+                    <ListItem sx={{ display: 'list-item', pl: 0 }}>
+                        <Typography>
+                            <Highlight>First touch up is free</Highlight> for up to <Highlight>3 months</Highlight> of appointment for flash tattoos or <Highlight>1 year</Highlight> for bigger pieces. Exceeding 3 months/1 year will require payment
+                        </Typography>
+                    </ListItem>
+                </List>
             </Container>
-              
         </>
     );
 };

@@ -6,7 +6,6 @@ import ContactForm from "./ContactForm";
 const Footer = () => {
     return (
         <>
-            <ContactForm />
             <Contact />
         </>
     );

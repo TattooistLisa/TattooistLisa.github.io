@@ -1,16 +1,10 @@
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Contact from './components/Contact';
-import Achievements from './components/Achievements';
-import Services from './components/Services';
-import Testimonial from './components/Testimonial';
-import Clients from './components/Clients';
-import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
+import MultiPic from './lisaImages/MultiPic.PNG';
 import { useEffect } from 'react';
+import { Box } from '@mui/material';
 const Home = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -19,13 +13,17 @@ const Home = () => {
         <div className="Home">
           
             <Header />
-            <About />
-            <Services />
-            
-            
-            <Clients />
-           
-
+            <Box
+                component="img"
+                src={MultiPic}
+                alt="Lisa Tattoo Examples"
+                sx={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block'
+                }}
+            />
+            <Footer />
         </div>
     );
 };

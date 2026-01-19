@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f50fd23a.css",
-    "main.js": "/static/js/main.a1d077b2.js",
+    "main.js": "/static/js/main.ff7c17bb.js",
     "static/js/453.89152b56.chunk.js": "/static/js/453.89152b56.chunk.js",
     "static/media/MultiPic.PNG": "/static/media/MultiPic.de04f0ea7fb254892898.PNG",
     "static/media/lisa.jpg": "/static/media/lisa.2c265dba14bb66aac7bc.jpg",
@@ -10,11 +10,11 @@
     "static/media/TattoistLisaLogo.png": "/static/media/TattoistLisaLogo.2e57bb2a3351c1a063d4.png",
     "index.html": "/index.html",
     "main.f50fd23a.css.map": "/static/css/main.f50fd23a.css.map",
-    "main.a1d077b2.js.map": "/static/js/main.a1d077b2.js.map",
+    "main.ff7c17bb.js.map": "/static/js/main.ff7c17bb.js.map",
     "453.89152b56.chunk.js.map": "/static/js/453.89152b56.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f50fd23a.css",
-    "static/js/main.a1d077b2.js"
+    "static/js/main.ff7c17bb.js"
   ]
 }

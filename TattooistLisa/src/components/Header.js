@@ -7,13 +7,23 @@ import { Box, Typography, Button, Stack, CircularProgress } from '@mui/material'
 const Header = () => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
-    return (
-        <>
-            {!imageLoaded (
+    if (!imageLoaded) {
+            return (
                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
                     <CircularProgress sx={{ color: '#BB6868' }} />
+                    <Box
+                        component="img"
+                        src={lisaImage}
+                        alt=""
+                        onLoad={() => setImageLoaded(true)}
+                        sx={{ display: 'none' }}
+                    />
                 </Box>
-            )}
+            );
+        }
+
+    return (
+        <>
             <Box
                 component="header"
                 sx={{

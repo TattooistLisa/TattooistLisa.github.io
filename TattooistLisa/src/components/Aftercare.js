@@ -79,7 +79,7 @@ const Aftercare = () => {
             </Box>
 
             {/* Tattoo Heal Video */}
-            <Box sx={{ display: 'flex', justifyContent: 'center', py: 2, px: 2 }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', py: 2, px: 0 }}>
                 <Box
                     sx={{
                         maxWidth: 300,

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Box, Container, Typography, CircularProgress } from '@mui/material';
 import BWsingle from '../lisaImages/BWsingle.jpg';
-import TattooHealVideo from '../lisaImages/TattoHealVideo.MOV';
+import TattooHealVideo from '../lisaImages/TattoHealVideo.mp4';
 
 const accentColor = '#BB6868';
 const fontFamily = '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';

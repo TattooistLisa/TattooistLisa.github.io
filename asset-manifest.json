@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.46efe462.css",
-    "main.js": "/static/js/main.aa2dfba1.js",
+    "main.js": "/static/js/main.adb4f9e6.js",
     "static/js/453.96ddf439.chunk.js": "/static/js/453.96ddf439.chunk.js",
     "static/media/TattoHealVideo.mp4": "/static/media/TattoHealVideo.7802df335a6aaafb2d80.mp4",
     "static/media/MultiPic.PNG": "/static/media/MultiPic.de04f0ea7fb254892898.PNG",
@@ -13,11 +13,11 @@
     "static/media/Mail.svg": "/static/media/Mail.40af627d56f3b43be7c5dde2e6c8e62a.svg",
     "index.html": "/index.html",
     "main.46efe462.css.map": "/static/css/main.46efe462.css.map",
-    "main.aa2dfba1.js.map": "/static/js/main.aa2dfba1.js.map",
+    "main.adb4f9e6.js.map": "/static/js/main.adb4f9e6.js.map",
     "453.96ddf439.chunk.js.map": "/static/js/453.96ddf439.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.46efe462.css",
-    "static/js/main.aa2dfba1.js"
+    "static/js/main.adb4f9e6.js"
   ]
 }

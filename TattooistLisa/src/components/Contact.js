@@ -21,7 +21,7 @@ const Contact = () => {
 
                 <Stack spacing={2}>
                     <Link
-                        href="https://www.instagram.com/tattooist__lisaa/"
+                        href="https://www.instagram.com/tattooist_lisaa/"
                         target="_blank"
                         rel="noopener noreferrer"
                         underline="none"

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Box, Container, Typography, CircularProgress } from '@mui/material';
 import BWsingle from '../lisaImages/BWsingle.jpg';
 import TattooHealVideo from '../lisaImages/TattoHealVideo.mp4';
@@ -15,10 +15,18 @@ const Highlight = ({ children }) => (
 const Aftercare = () => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const [videoReady, setVideoReady] = useState(false);
+    const videoRef = useRef(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    // Check if video is already loaded (cached)
+    useEffect(() => {
+        if (videoRef.current && videoRef.current.readyState >= 2) {
+            setVideoReady(true);
+        }
+    }, [imageLoaded]);
 
     if (!imageLoaded) {
         return (
@@ -104,6 +112,7 @@ const Aftercare = () => {
                         </Box>
                     )}
                     <video
+                        ref={videoRef}
                         src={TattooHealVideo}
                         controls
                         loop

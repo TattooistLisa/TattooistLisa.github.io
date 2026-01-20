@@ -35,7 +35,7 @@ const Contact = () => {
                         }}
                     >
                         <InstagramIcon style={{ width: 24, height: 24, display: 'block' }} />
-                        <Typography fontSize={18} sx={{ color: '#31312C', lineHeight: 1, '&:hover': { color: '#BB6868' } }}>tattooist__lisaa</Typography>
+                        <Typography fontSize={18} sx={{ color: '#31312C', lineHeight: 1, '&:hover': { color: '#BB6868' } }}>tattooist_lisaa</Typography>
                     </Link>
 
                     <Link

@@ -14,12 +14,15 @@ const Highlight = ({ children }) => (
 
 const Aftercare = () => {
     const [imageLoaded, setImageLoaded] = useState(false);
+    const [videoReady, setVideoReady] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    if (!imageLoaded) {
+    const isLoading = !imageLoaded || !videoReady;
+
+    if (isLoading) {
         return (
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
                 <CircularProgress sx={{ color: '#BB6868' }} />
@@ -29,6 +32,13 @@ const Aftercare = () => {
                     alt=""
                     onLoad={() => setImageLoaded(true)}
                     sx={{ display: 'none' }}
+                />
+                <video
+                    src={TattooHealVideo}
+                    onCanPlay={() => setVideoReady(true)}
+                    muted
+                    playsInline
+                    style={{ display: 'none' }}
                 />
             </Box>
         );
@@ -92,6 +102,9 @@ const Aftercare = () => {
                     <video
                         src={TattooHealVideo}
                         controls
+                        autoPlay
+                        muted
+                        loop
                         playsInline
                         style={{
                             width: '100%',

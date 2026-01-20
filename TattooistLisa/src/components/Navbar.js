@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import Logo from '../images/TattoistLisaLogo.png';
 import {
@@ -6,52 +6,9 @@ import {
     Toolbar,
     Container,
     Box,
-    IconButton,
-    Drawer,
-    List,
-    ListItem,
-    ListItemButton,
-    ListItemText,
-    Button,
-    useMediaQuery,
-    useTheme
 } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
-    const [mobileOpen, setMobileOpen] = useState(false);
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
-    const handleDrawerToggle = () => {
-        setMobileOpen(!mobileOpen);
-    };
-
-    const navItems = [
-        { label: 'Home', to: '/', isLink: true },
-        { label: 'Team', to: '/team', isLink: true },
-        { label: 'Contact', to: '#contact', isLink: false },
-    ];
-
-    const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <List>
-                {navItems.map((item) => (
-                    <ListItem key={item.label} disablePadding>
-                        <ListItemButton
-                            component={item.isLink ? Link : 'a'}
-                            to={item.isLink ? item.to : undefined}
-                            href={!item.isLink ? item.to : undefined}
-                            sx={{ textAlign: 'center' }}
-                        >
-                            <ListItemText primary={item.label} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-        </Box>
-    );
-
     return (
         <>
             <AppBar position="sticky" sx={{ backgroundColor: 'white', boxShadow: 'none', zIndex: 1000 }}>

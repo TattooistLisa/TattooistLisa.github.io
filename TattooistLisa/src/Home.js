@@ -1,7 +1,4 @@
-import Navbar from './components/Navbar';
 import Header from './components/Header';
-import About from './components/About';
-import Footer from './components/Footer';
 import MultiPic from './lisaImages/MultiPic.PNG';
 import { useEffect } from 'react';
 import { Box } from '@mui/material';

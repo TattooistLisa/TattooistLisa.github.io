@@ -21,7 +21,7 @@ const Aftercare = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    // Handle video loading for iOS Safari compatibility
+    // Handle video loading for iOS Safari compatibility - runs immediately for parallel loading
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
@@ -47,25 +47,28 @@ const Aftercare = () => {
             video.removeEventListener('loadedmetadata', handleReady);
             video.removeEventListener('canplay', handleReady);
         };
-    }, [imageLoaded]);
-
-    if (!imageLoaded) {
-        return (
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-                <CircularProgress sx={{ color: '#BB6868' }} />
-                <Box
-                    component="img"
-                    src={BWsingle}
-                    alt=""
-                    onLoad={() => setImageLoaded(true)}
-                    sx={{ display: 'none' }}
-                />
-            </Box>
-        );
-    }
+    }, []);
 
     return (
         <>
+            {/* Loading overlay */}
+            {!imageLoaded && (
+                <Box sx={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: 'white',
+                    zIndex: 9999
+                }}>
+                    <CircularProgress sx={{ color: '#BB6868' }} />
+                </Box>
+            )}
+
             <Box
                 component="header"
                 sx={{
@@ -78,6 +81,7 @@ const Aftercare = () => {
                     component="img"
                     src={BWsingle}
                     alt="Lisa Tattoo Artist"
+                    onLoad={() => setImageLoaded(true)}
                     sx={{
                         width: '100%',
                         height: 'auto',

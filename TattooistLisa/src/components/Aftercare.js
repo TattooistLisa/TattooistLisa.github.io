@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Box, Container, Typography, CircularProgress } from '@mui/material';
 import BWsingle from '../lisaImages/BWsingle.jpg';
+import TattooHealVideo from '../lisaImages/TattoHealVideo.MOV';
 
 const accentColor = '#BB6868';
 const fontFamily = '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
@@ -77,7 +78,31 @@ const Aftercare = () => {
                 </Box>
             </Box>
 
-            <Container maxWidth="sm" sx={{ py: 5, fontFamily: fontFamily, fontWeight: 400, '& .MuiTypography-root': { fontFamily: 'inherit' } }}>
+            {/* Tattoo Heal Video */}
+            <Box sx={{ display: 'flex', justifyContent: 'center', py: 2, px: 2 }}>
+                <Box
+                    sx={{
+                        maxWidth: 300,
+                        width: '100%',
+                        borderRadius: 4,
+                        overflow: 'hidden',
+                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+                    }}
+                >
+                    <video
+                        src={TattooHealVideo}
+                        controls
+                        playsInline
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                            display: 'block',
+                        }}
+                    />
+                </Box>
+            </Box>
+
+            <Container maxWidth="sm" sx={{ py: 0, fontFamily: fontFamily, fontWeight: 400, '& .MuiTypography-root': { fontFamily: 'inherit' } }}>
                 <Typography variant="h5" align="center" sx={{ mb: 3, color: '#8A2A35', fontWeight: 500 }}>
                     How to Heal your Tattoo
                 </Typography>

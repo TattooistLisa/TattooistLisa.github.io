@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.5dc4252a.css",
-    "main.js": "/static/js/main.5c3801eb.js",
+    "main.js": "/static/js/main.a174ad0e.js",
     "static/js/453.96ddf439.chunk.js": "/static/js/453.96ddf439.chunk.js",
-    "static/media/TattoHealVideo.MOV": "/static/media/TattoHealVideo.b6e056b599656d0766b9.MOV",
+    "static/media/TattoHealVideo.mp4": "/static/media/TattoHealVideo.7802df335a6aaafb2d80.mp4",
     "static/media/MultiPic.PNG": "/static/media/MultiPic.de04f0ea7fb254892898.PNG",
     "static/media/lisa.jpg": "/static/media/lisa.2c265dba14bb66aac7bc.jpg",
     "static/media/BWsingle.jpg": "/static/media/BWsingle.fd8bc1d4223f688f64dc.jpg",
@@ -13,11 +13,11 @@
     "static/media/Mail.svg": "/static/media/Mail.40af627d56f3b43be7c5dde2e6c8e62a.svg",
     "index.html": "/index.html",
     "main.5dc4252a.css.map": "/static/css/main.5dc4252a.css.map",
-    "main.5c3801eb.js.map": "/static/js/main.5c3801eb.js.map",
+    "main.a174ad0e.js.map": "/static/js/main.a174ad0e.js.map",
     "453.96ddf439.chunk.js.map": "/static/js/453.96ddf439.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5dc4252a.css",
-    "static/js/main.5c3801eb.js"
+    "static/js/main.a174ad0e.js"
   ]
 }
